@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="bg">
+      <nav>
+        <img src="./imgs/logo.png" alt=" logo" />
+        <div class="link">
+          <a href="#"> Home</a>
+          <a href="">Contact </a>
+          <i class="ri-search-line"></i>
+          <i id="menu" class="ri-menu-2-line"></i>
+        </div>
+      </nav>
+
+      <div id="section">
+        <img id="splash" src="./imgs/rightSplash.png" alt="" />
+        <div id="left">
+          <div id="smline"></div>
+          <h4 class="leftitem">Hello ,I am 👋</h4>
+          <img class="leftitem" src="./imgs/name.png" alt="" />
+          <h5>A designer from <span>ukraine</span></h5>
+          <div id="playbtn">
+            <img class="button item" src="/imgs/playButton.png" alt="butoon" />
+            <h5 class="h5 item">see my work profile</h5>
+          </div>
+
+          <div id="contact">
+            <h3>Contact me on:</h3>
+            <h5>something@gmail.com</h5>
+            <h6>+91 3847739948</h6>
+          </div>
+        </div>
+        <div id="right">
+          <img src="./imgs/mainImage.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var menu = document.querySelector("#menu");
+      var bg = document.querySelector("#bg");
+      let toggleZoom = true;
+      $(menu).click(function (e) {
+        if (toggleZoom) {
+          bg.style.transform = "scale(0.8)";
+          bg.style.borderRadius = "10px";
+          bg.style.boxShadow = "0 150px 45px -100px rgba(0,0,0,0.2)";
+          toggleZoom = false
+        }else{
+          bg.style.transform = "scale(1)";
+          bg.style.borderRadius = "10px";
+          bg.style.boxShadow = "0 150px 45px -100px rgba(0,0,0,0.2)";
+          toggleZoom = true;
+        }
+      });
+    </script>
+  </body>
+</html>
